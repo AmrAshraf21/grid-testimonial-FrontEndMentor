@@ -1,0 +1,329 @@
+/* ### Primary
+
+Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Font
+
+- Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
+- Weights: 500, 600 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Barlow Semi Condensed', sans-serif; ;
+    font-size: 1rem;
+    background-color: #ECF2F8;
+    color: #fff
+    
+}
+.container{
+    margin: 20px auto;
+  
+    width: 1150px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(390px,1fr));
+    grid-template-areas: 
+    'card1 card1  card2 card5' 
+    ' card4  card3 card3 card5';
+    
+    gap: 10px;
+    color: black;
+    align-content: space-between;
+}
+@media(max-width:1100px){
+    .container{
+        width: 400px;
+        display: grid;
+    grid-template-columns:repeat(1,1fr);
+    grid-template-rows: repeat(5,auto);
+    grid-template-areas:'card1'
+    'card2'
+    'card3'
+    'card4'
+    'card5'
+     ;
+
+}
+}
+
+.container .card{
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+  
+}
+.container .card.card1{
+   grid-area: card1;
+    background-color: #733fc8f3;
+    color: white;
+    background-image: url(https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/bg-pattern-quotation.svg);;
+    background-repeat: no-repeat;
+    background-position: 22rem 0;
+    
+    
+}
+.container .card.card1 .image  {
+    width:10px;
+    height: 10px;
+    padding: 5px;
+}
+
+.container .card.card1 .image img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: 1px solid;
+display: inline-block;
+margin-top: 8px;
+}
+.container .card1 .heading{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.container .card1 .heading h2{
+    font-size: 17px;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.container .card1 .heading span{
+    font-size: 12px;
+    color: #ccc;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+.container .card1 p.quote{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px 20px;
+    line-height: 1.5;
+}
+.container .card1 p.test{
+    color: #ccc;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 1.8;
+}
+.container .card2{
+grid-area: card2;
+background-color: rgb(21, 83, 85);
+color: white;
+
+}
+.container .card.card2 .image  {
+    width:0px;
+    height: 10px;
+    padding: 5px;
+}
+
+.container .card.card2 .image img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: 1px solid;
+display: inline-block;
+margin-top: 8px;
+}
+.container .card2 .heading{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.container .card2 .heading h2{
+    font-size: 17px;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.container .card2 .heading span{
+    font-size: 12px;
+    color: #ccc;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+.container .card2 p.quote{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px 20px;
+    line-height: 1.2;
+}
+.container .card2 p.test{
+    color: #ccc;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 1.5;
+}
+.container .card5{
+grid-area: card5;
+background-color: rgb(5, 27, 27);
+color: white;
+
+}
+.container .card.card5 .image  {
+    width:0px;
+    height: 10px;
+    padding: 5px;
+}
+
+.container .card.card5 .image img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: 1px solid;
+display: inline-block;
+margin-top: 8px;
+}
+.container .card5 .heading{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.container .card5 .heading h2{
+    font-size: 17px;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.container .card5 .heading span{
+    font-size: 12px;
+    color: #ccc;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+.container .card5 p.quote{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px 20px;
+    line-height: 1.2;
+}
+.container .card5 p.test{
+    color: #ccc;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 1.6;
+}
+.container .card.card3{
+grid-area: card3;
+background-color: rgb(49, 54, 54);
+color: white;
+
+}
+.container .card.card3 .image  {
+    width:0px;
+    height: 10px;
+    padding: 5px;
+}
+
+.container .card.card3 .image img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: 1px solid;
+display: inline-block;
+margin-top: 8px;
+}
+.container .card3 .heading{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.container .card3 .heading h2{
+    font-size: 17px;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.container .card3 .heading span{
+    font-size: 12px;
+    color: #ccc;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+.container .card3 p.quote{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px 20px;
+    line-height: 1.2;
+}
+.container .card3 p.test{
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    line-height: 1.5;
+}
+.container .card.card4{
+grid-area: card4;
+background-color: rgb(21, 83, 85);
+color: white;
+
+}
+.container .card.card4 .image  {
+    width:0px;
+    height: 10px;
+    padding: 5px;
+}
+
+.container .card.card4 .image img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: 1px solid;
+display: inline-block;
+margin-top: 8px;
+}
+.container .card4 .heading{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+.container .card4 .heading h2{
+    font-size: 17px;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+.container .card4 .heading span{
+    font-size: 12px;
+    color: #ccc;
+    margin-left: 10px;
+    margin-top: 2px;
+}
+.container .card4 p.quote{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 10px 20px;
+    line-height: 1.2;
+}
+.container .card4 p.test{
+    color: #ccc;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 1.5;
+}
